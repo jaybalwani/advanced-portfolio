@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jay Balwani</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/52b9614d93.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
+    </style>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("ZC243j5bYGcPXwooF");
+      })();
+    </script>
+  </head>
+  <body>
+    <section id="landing" onmousemove="moveShapes(event)">
+      <div class="row">
+        <nav>
+          <figure class="nav__logo--wrapper">
+            <img class="nav__logo" src="./assets/logo.svg" alt="" />
+          </figure>
+          <ul class="nav__link--list">
+            <li class="nav__link">
+              <a
+                href=""
+                class="nav__link--anchor link__hover-effect link__hover-effect--black about"
+                >About</a
+              >
+            </li>
+            <li class="nav__link">
+              <a
+                href=""
+                class="nav__link--anchor link__hover-effect link__hover-effect--black"
+                >Projects</a
+              >
+            </li>
+            <li class="nav__link">
+              <a
+                class="nav__link--anchor link__hover-effect link__hover-effect--black"
+                onclick="modalToggle()"
+                >Contact</a
+              >
+            </li>
+            <li class="nav__link">
+              <button
+                onclick="toggleContrast()"
+                class="toggle__button nav__link--anchor"
+                ><i class="fa-solid fa-circle-half-stroke"></i
+              ></button>
+            </li>
+          </ul>
+        </nav>
+        <header>
+          <div class="row">
+            <h1 class="title">Hey</h1>
+            <h1 class="title title--secondary orange">I'm Jay.</h1>
+            <p class="header__para">
+              I'm a <b class="orange">Frontend Software Engineer</b> with a
+              strong passion for building web applications with great user
+              experiences.<br />
+              Here's a bit more <b><a href="#" class="orange" onclick="modalToggle()">about me</a></b
+              >.
+            </p>
+            <div class="social__list">
+              <a href="" class="social__link hover click">
+                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+              </a>
+              <a href="" class="social__link hover click">
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+              <a href="" class="social__link hover click">
+                <i class="fas fa-file-pdf" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </header>
+      </div>
+      <a href="#modal">
+        <button class="mail__fixed hover click" onclick="modalToggle()">
+          <i class="fa-solid fa-envelope"></i>
+        </button>
+      </a>
+      <a href="#projects" class="scroll">
+        <div class="scroll__icon"></div>
+      </a>
+      <div class="modal" id="modal">
+        <div class="modal__half modal__about">
+          <h2 class="modal__title">Here's a bit about me.</h2>
+          <h3 class="modal__subtitle">Fullstack Web Developer</h3>
+          <p class="modal__text">
+            I'm a 21 year-old Australian
+            <b class="orange">frontend software engineer</b> with experience
+            developing websites for top-tech companies like
+            <b class="orange">Google</b> and <b class="orange">Canva</b>.
+            <br />
+            I currently solve extremely difficult engineering problems every day
+            with <b class="orange">React</b>,
+            <b class="orange">TypeScript</b> and <b class="orange">MobX</b>
+            in Canva's Video team.
+          </p>
+          <div class="modal__languages">
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                alt=""
+              />
+              <span class="language__name">HTML</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png"
+                alt=""
+              />
+              <span class="language__name">CSS</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png"
+                alt=""
+              />
+              <span class="language__name">JavaScript</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/typescript-3521774-2945272.png"
+                alt=""
+              />
+              <span class="language__name">TypeScript</span>
+            </figure>
+
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://mobx.js.org/img/mobx.png"
+                alt=""
+              />
+              <span class="language__name">MobX</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png"
+                alt=""
+              />
+              <span class="language__name">React</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/vue-282497.png"
+                alt=""
+              />
+              <span class="language__name">Vue</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/nuxt-dot-js-3628959-3030184.png"
+                alt=""
+              />
+              <span class="language__name">Nuxt</span>
+            </figure>
+          </div>
+        </div>
+        <div class="modal__half modal__contact">
+          <h2 class="modal__title white">Let's have a chat!</h2>
+          <h3 class="modal__subtitle white">
+            I'm currently open to new opportunities.
+          </h3>
+          <form onsubmit = "formSubmit(event)" class="contact__form">
+            <div class="form__item">
+              <label for="name" class="form__item--label white">Name</label>
+              <input
+                type="text"
+                id="name"
+                class="form__item--input"
+                name="from_name"
+              />
+            </div>
+            <div class="form__item">
+              <label for="email" class="form__item--label white">Email</label>
+              <input
+                type="text"
+                id="email"
+                class="form__item--input"
+                name="from_email"
+              />
+            </div>
+            <div class="form__item">
+              <label for="message" class="form__item--label white">Message</label>
+              <textarea
+                class="form__item--input"
+                id="message"
+                name="message"
+                type="text"
+                required=""
+                style="height: 105px"
+              ></textarea>
+            </div>
+            <button class="form__item--submit" type="submit">
+              Send it my way
+            </button>
+            <button class="form__item--exit" onclick="modalToggle()">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fa-solid fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+            Thanks for the message! Looking forward to speaking with you soon.
+          </div>
+        </div>
+      </div>
+      <img src="./assets/semi circle.svg" class="shape shape--0">
+      <img src="./assets/circle.svg" class="shape shape--1">
+      <img src="./assets/squiggly.svg" class="shape shape--2">
+      <img src="./assets/circle.svg" class="shape shape--3">
+      <img src="./assets/triangle.svg" class="shape shape--4">
+      <img src="./assets/circle.svg" class="shape shape--5">
+      <img src="./assets/squiggly.svg" class="shape shape--6">
+      <img src="./assets/circle.svg" class="shape shape--7">
+      <img src="./assets/semi circle.svg" class="shape shape--8">
+    </section>
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <h2 class="projects__heading">
+            Here are some of my <span class="orange">projects.</span>
+          </h2>
+          <ul class="project__list">
+            <li class="project">
+              <div class="project__wrapper">
+                <figure class="project__img--wrapper">
+                  <img
+                    src="./assets/google mockup.png"
+                    alt=""
+                    class="project__img"
+                  />
+                </figure>
+                <div class="project__description--bg"></div>
+                <div class="project__description">
+                  <h2 class="project__title">Google In-Store</h2>
+                  <h3 class="project__tech">
+                    Html, CSS, JavaScript, React.JS, NodeJS
+                  </h3>
+                  <p class="project__text">
+                    Google In-Store is a platform allowing Google retail
+                    employees to report any issues with their store products.
+                    Once an issue is reported, it is posted to an API which
+                    populates a separate platform's frontend - which is used by
+                    Google's vendors to fix the issue as soon as possible. I was
+                    the sole front-end developer of this application.
+                  </p>
+                  <div class="project__links">
+                    <a href="https://github.com" class="project__link">
+                      <i class="fab fa-github" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://google.com" class="project__link">
+                      <i class="fas fa-link" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project">
+              <div class="project__wrapper">
+                <figure class="project__img--wrapper">
+                  <img
+                    src="./assets/google mockup.png"
+                    alt=""
+                    class="project__img"
+                  />
+                </figure>
+                <div class="project__description--bg"></div>
+                <div class="project__description">
+                  <h2 class="project__title">Google In-Store</h2>
+                  <h3 class="project__tech">
+                    Html, CSS, JavaScript, React.JS, NodeJS
+                  </h3>
+                  <p class="project__text">
+                    Google In-Store is a platform allowing Google retail
+                    employees to report any issues with their store products.
+                    Once an issue is reported, it is posted to an API which
+                    populates a separate platform's frontend - which is used by
+                    Google's vendors to fix the issue as soon as possible. I was
+                    the sole front-end developer of this application.
+                  </p>
+                  <div class="project__links">
+                    <a href="https://github.com" class="project__link">
+                      <i class="fab fa-github" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://google.com" class="project__link">
+                      <i class="fas fa-link" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project">
+              <div class="project__wrapper">
+                <figure class="project__img--wrapper">
+                  <img
+                    src="./assets/google mockup.png"
+                    alt=""
+                    class="project__img"
+                  />
+                </figure>
+                <div class="project__description--bg"></div>
+                <div class="project__description">
+                  <h2 class="project__title">Google In-Store</h2>
+                  <h3 class="project__tech">
+                    Html, CSS, JavaScript, React.JS, NodeJS
+                  </h3>
+                  <p class="project__text">
+                    Google In-Store is a platform allowing Google retail
+                    employees to report any issues with their store products.
+                    Once an issue is reported, it is posted to an API which
+                    populates a separate platform's frontend - which is used by
+                    Google's vendors to fix the issue as soon as possible. I was
+                    the sole front-end developer of this application.
+                  </p>
+                  <div class="project__links">
+                    <a href="https://github.com" class="project__link">
+                      <i class="fab fa-github" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://google.com" class="project__link">
+                      <i class="fas fa-link" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="row footer__row">
+          <figure class="footer__logo--wrapper">
+            <img src="./assets/logo.svg" alt="" class="footer__logo" />
+          </figure>
+          <div class="footer__links">
+            <a href="#" class="footer__link link__hover-effect">GitHub</a>
+            <a href="#" class="footer__link link__hover-effect">LinkedIn</a>
+            <a href="#" class="footer__link link__hover-effect" onclick="modalToggle()">Contact</a>
+            <a href="#" class="footer__link link__hover-effect">Resume</a>
+          </div>
+          <span class="copyright">Copyright &copy; 2023 Jay Balwani</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
